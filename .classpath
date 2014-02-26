@@ -2,17 +2,17 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
-	<classpathentry kind="lib" path="/Users/justin/Downloads/java3d-1_5_1-macosx/lib/ext/j3dcore.jar">
+	<classpathentry kind="lib" path="/Users/ict12/Downloads/java3d-1_5_1-macosx/lib/ext/j3dcore.jar">
 		<attributes>
 			<attribute name="javadoc_location" value="http://download.java.net/media/java3d/javadoc/1.5.0/"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/Users/justin/Downloads/java3d-1_5_1-macosx/lib/ext/j3dutils.jar">
+	<classpathentry kind="lib" path="/Users/ict12/Downloads/java3d-1_5_1-macosx/lib/ext/j3dutils.jar">
 		<attributes>
 			<attribute name="javadoc_location" value="http://download.java.net/media/java3d/javadoc/1.5.0/"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/Users/justin/Downloads/java3d-1_5_1-macosx/lib/ext/vecmath.jar">
+	<classpathentry kind="lib" path="/Users/ict12/Downloads/java3d-1_5_1-macosx/lib/ext/vecmath.jar">
 		<attributes>
 			<attribute name="javadoc_location" value="http://download.java.net/media/java3d/javadoc/1.5.0/"/>
 		</attributes>

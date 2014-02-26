@@ -3,6 +3,8 @@ package xenocider.settlements.listeners;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
+import xenocider.settlements.graphics.Drawer;
+
 public class KeyboardListener implements KeyListener{
 	
 	public static boolean arrowUp = false;
@@ -12,11 +14,12 @@ public class KeyboardListener implements KeyListener{
 
 	@Override
 	public void keyPressed(KeyEvent evt) {
+		System.out.println("Pressed");
 	    int keyCode = evt.getKeyCode();
 	    switch( keyCode ) { 
 	        case KeyEvent.VK_UP:
 	        	arrowUp = true;
-	        	System.out.println("UP");
+	        	Drawer.moveCamera(0, 0, 0.1f, 0, 0);
 	            break;
 	        case KeyEvent.VK_DOWN:
 	        	arrowDown = true;
