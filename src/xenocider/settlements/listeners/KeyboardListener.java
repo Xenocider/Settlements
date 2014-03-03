@@ -7,28 +7,34 @@ import xenocider.settlements.graphics.Drawer;
 
 public class KeyboardListener implements KeyListener{
 	
-	public static boolean arrowUp = false;
-	public static boolean arrowDown = false;
-	public static boolean arrowLeft = false;
-	public static boolean arrowRight = false;
 
 	@Override
 	public void keyPressed(KeyEvent evt) {
-		System.out.println("Pressed");
 	    int keyCode = evt.getKeyCode();
 	    switch( keyCode ) { 
 	        case KeyEvent.VK_UP:
-	        	arrowUp = true;
-	        	Drawer.moveCamera(0, 0, 0.1f, 0, 0);
+	        	Drawer.moveCamera(0, 0, -0.02f, 0, 0);
 	            break;
 	        case KeyEvent.VK_DOWN:
-	        	arrowDown = true;
+	        	Drawer.moveCamera(0, 0, 0.02f, 0, 0);
 	            break;
 	        case KeyEvent.VK_LEFT:
-	        	arrowLeft = true;
+	        	Drawer.moveCamera(-0.02f, 0, 0, 0, 0);
 	            break;
 	        case KeyEvent.VK_RIGHT :
-	        	arrowRight = true;
+	        	Drawer.moveCamera(0.02f, 0, 0, 0, 0);
+	            break;
+	        case KeyEvent.VK_COMMA:
+	        	Drawer.moveCamera(0, -0.02f, 0, 0, 0);
+	            break;
+	        case KeyEvent.VK_PERIOD :
+	        	Drawer.moveCamera(0, 0.02f, 0, 0, 0);
+	            break;
+	        case KeyEvent.VK_O:
+	        	Drawer.moveCamera(0, 0, 0, 2, 0);
+	            break;
+	        case KeyEvent.VK_P :
+	        	Drawer.moveCamera(0, 0, 0, -2, 0);
 	            break;
 	     }
 	} 
@@ -38,16 +44,12 @@ public class KeyboardListener implements KeyListener{
 	    int keyCode = evt.getKeyCode();
 	    switch( keyCode ) { 
 	        case KeyEvent.VK_UP:
-	        	arrowUp = false;
 	            break;
 	        case KeyEvent.VK_DOWN:
-	        	arrowDown = false;
 	            break;
 	        case KeyEvent.VK_LEFT:
-	        	arrowLeft = false;
 	            break;
 	        case KeyEvent.VK_RIGHT :
-	        	arrowRight = false;
 	            break;
 	     }
 	} 

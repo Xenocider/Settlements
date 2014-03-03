@@ -5,6 +5,7 @@ import java.awt.BorderLayout;
 import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.Toolkit;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import javax.media.j3d.BranchGroup;
@@ -14,6 +15,7 @@ import javax.swing.JTextArea;
 
 import com.sun.j3d.utils.universe.SimpleUniverse;
 
+import xenocider.settlements.blocks.Grass;
 import xenocider.settlements.graphics.Drawer;
 import xenocider.settlements.listeners.KeyboardListener;
 
@@ -45,6 +47,7 @@ public class Settlements extends JFrame{
 	        conigureUniverse();
 	        //addModelToUniverse();
 	        //addLightsToUniverse();
+	        loadTextures();
 	        Drawer.createWorld();
 	        root.compile();
 	        universe.addBranchGraph(root);
@@ -52,7 +55,12 @@ public class Settlements extends JFrame{
 	        getContentPane().addKeyListener(new KeyboardListener());
 	    }
 
-	    /**
+	    private void loadTextures() throws FileNotFoundException, IOException {
+			Grass.loadTexture();
+			
+		}
+
+		/**
 	     * Defines basic properties of this window.
 	     */
 	    private void configureWindow() {
@@ -79,7 +87,7 @@ public class Settlements extends JFrame{
 	     */
 	    private void conigureUniverse() {
 	        universe = new SimpleUniverse(canvas);
-	        Drawer.setCamera(0, 0.1f, 1, 0, 0);
+	        Drawer.setCamera(0, 0.5f, 1, 0, -60);
 	        root = new BranchGroup();
 	    }
 	    
